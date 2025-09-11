@@ -1,0 +1,126 @@
+body {
+    background: #181818;
+    color: #f5f5f5;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #222;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    padding: 32px;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-contacto {
+    color: #39ff14;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.logo-contacto {
+    border-radius: 50%;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    width: 90px;
+    height: 90px;
+}
+
+.navega-a {
+    color: #39ff14;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 24px;
+    display: inline-block;
+    font-size: 1.1rem;
+}
+
+.navega-a:hover {
+    text-decoration: underline;
+}
+
+.formulario {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.campo {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #39ff14;
+}
+
+.campo input,
+.campo textarea {
+    border-radius: 6px;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    background: #222;
+    color: #f5f5f5;
+    margin-bottom: 4px;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: 2px solid #39ff14;
+}
+
+.boton-primario {
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1E90FF;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.boton-primario:hover {
+    background-color: #1565c0;
+}
+
+.informacion-contacto {
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 18px;
+    margin-top: 16px;
+    text-align: left;
+    width: 100%;
+    color: #fff;
+}
+
+.informacion-contacto h3 {
+    color: #39ff14;
+    margin-bottom: 12px;
+}
+
+.informacion-contacto a {
+    color: #39ff14;
+    text-decoration: none;
+}
+
+.informacion-contacto a:hover {
+    text-decoration: underline;
+}

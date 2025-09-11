@@ -1,3 +1,4 @@
+/* Importar fuentes */
 @font-face {
   font-family: Orbitron;
   src: url(fonts/orbitron-black.otf);
@@ -8,99 +9,118 @@
   src: url(fonts/Roboto-Black.ttf);
 }
 
+/* Estilos globales */
 body {
   background-color: rgb(0, 0, 0);
   color: aliceblue;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos de enlaces por defecto */
+a {
+  color: #39FF14;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1E90FF;
+}
+
+/* Colores eléctricos con brillo */
+.Lu-electric-blue-text {
+    color: #00e5ff;
+    text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff;
+}
+
+.Lu-electric-green-text {
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+
+/* Main Container (Contenedor principal de cada página, aparte del header/footer) */
+.Lu-main-container {
+  flex: 1;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.Lu-branding {
+  font-family: Orbitron, sans-serif;
+  background-color: #060606;
+  border-bottom: 1px solid #1E90FF;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Lu-branding h1 {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.Lu-branding .Lu-branding-img {
+  margin-right: 0.5rem;
 }
 
 .Lu-home-button {
   color: #1E90FF;
-}
-
-.Lu-productos-menu {
-  padding: 150px;
-}
-
-.Lu-branding {
-  font-family: Orbitron;
-  background-color: #060606;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
   border: 1px solid #1E90FF;
-  border-radius: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-radius: 5px;
+  margin-left: 1rem;
+}
+
+.Lu-home-button:hover {
+  background-color: #1E90FF;
+  color: #000;
+}
+
+.Lu-main-header {
+  background-color: #111;
+  padding: 1.5rem 1rem;
   text-align: center;
+  border-bottom: 1px solid #39FF14;
 }
 
-.Lu-boton-nuevo-usuario {
-  background-color: #39FF14;
-  display: flex;
-  justify-content: center;
-}
-
-a {
-  color: #39FF14;
-}
-
-.Lu-nuevo-usuario {
-  display: flex;
-  justify-content: center;
+.Lu-main-header h1 {
+  font-family: Orbitron, sans-serif;
+  color: #1E90FF;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px #1E90FF;
 }
 
 .Lu-role-name {
   color: red;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-.Lu-main-header {
-  
-}
-
-.Lu-main-container {
-  display: flex;
-  background-color: #000000;
-  border: #39FF14;
-  border-color: #39FF14;
-}
-
-h1 {
-  display: flex;
-  justify-content: center;
-}
-
-.Lu-footer {
-  display: flex;
-  justify-content: center;
-}
-
-.Lu-editar-boton {
-  background-color: #39FF14;
-  justify-content: center;
-}
-
-.Lu-input-editar {
-  
-}
-
-.Lu-imagen-producto {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.Lu-admin-product-img {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  border: 2px solid white;
-  border-radius: 8px;
-}
-
+/* Footer (Estilos generales, las clases del footer-container, etc. son más específicas) */
 .Lu-footer-container {
-  background-color: #222;
+  background-color: #36454F;
   color: #eee;
   padding: 30px 20px;
-  font-family: Arial, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 14px;
+  border-top: 1px solid #555;
 }
 
 .Lu-footer-top {
@@ -114,6 +134,7 @@ h1 {
 
 .Lu-footer-branding {
   flex: 1 1 250px;
+  min-width: 200px;
 }
 
 .Lu-site-name {
@@ -133,6 +154,7 @@ h1 {
   gap: 15px;
   justify-content: center;
   align-items: center;
+  min-width: 120px;
 }
 
 .Lu-credit-card-image {
@@ -150,6 +172,7 @@ h1 {
 .Lu-footer-nav {
   flex: 1 1 150px;
   text-align: center;
+  min-width: 100px;
 }
 
 .Lu-footer-nav ul {
@@ -169,7 +192,7 @@ h1 {
 }
 
 .Lu-footer-nav ul li a:hover {
-  color: #ff9800;
+  color: #00ff00;
 }
 
 .Lu-footer-newsletter {
@@ -197,11 +220,12 @@ h1 {
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .Lu-subscribe-button:hover {
-  background-color: #e68a00;
+  background-color: #1E90FF;
+  color: #fff;
 }
 
 .Lu-footer-copy {
@@ -211,357 +235,813 @@ h1 {
   margin: 0;
 }
 
-@font-face {
+/* Clases específicas de los formularios y botones */
+.Lu-botonesEditar {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 2rem;
+}
 
-    font-family: Orbitron;
-  
-    src: url(fonts/orbitron-black.otf);
-  
-  }
-  
-  
-  
-  @font-face {
-  
-    font-family: Roboto;
-  
-    src: url(fonts/Roboto-Black.ttf);
-  
-  }
-  
-  
-  
-  .main{background-color: black;
-  
-  color:aliceblue;
-  
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
-  
-  .main-header{
-    color: rgb(255, 255, 255);
-    align-content: center;
-    position: relative;
-    text-align: center;
-  ;}
-  
-  .main-header{
-  
-    font-family: Orbitron;
-  
-  }
-  
-  
-  
-  body{background-color: black;}
-  
-  .button-highlights{background-color: #1e90ff;}
-  
-  
-  
-  .hero-text{
-  
-    color: #D3D3D3;
-  
-  
-  
-  }
-  
-  .product-list {
-  
-    display: grid;
-  
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
-  
-    gap: 20px; /* espacio entre elementos */
-  
-    list-style: none; /* quitar puntos si es <ul> */
-  
-    padding: 0;
-    margin: 0;
-    
-  
-   }
-   h1 {
+.Lu-botonesEditar li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 10px;
+}
+
+.Lu-editar-boton, .Lu-boton-ver, .Lu-subir-archivo {
+  background-color: #39FF14;
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.Lu-editar-boton:hover, .Lu-boton-ver:hover, .Lu-subir-archivo:hover {
+  background-color: #1E90FF;
+  color: #fff;
+}
+
+.Lu-input-editar, .Lu-nuevo-usuario, .Lu-codigo-ver-producto, .Lu-newsletter {
+  flex-grow: 1;
+  padding: 0.75rem;
+  border: 1px solid #1E90FF;
+  background-color: #0d0d0d;
+  color: #eee;
+  border-radius: 5px;
+  min-width: 150px;
+}
+
+.Lu-input-editar::placeholder, .Lu-nuevo-usuario::placeholder, .Lu-codigo-ver-producto::placeholder {
+  color: #bbb;
+}
+
+.Lu-boton-nuevo-usuario {
+  background-color: #39FF14;
+  color: #000;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 1.5rem;
+  align-self: center;
+}
+
+.Lu-boton-nuevo-usuario:hover {
+  background-color: #1E90FF;
+  color: #fff;
+}
+
+/* Sección de productos en el home de admin */
+.Lu-productos-menu {
+  background-color: #1a1a1a;
+  border: 1px solid #39FF14;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+}
+
+.Lu-productos-menu p {
+  font-family: Orbitron, sans-serif;
+  font-size: 1.5rem;
+  color: #00e5ff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px #00e5ff;
+}
+
+.Lu-productos-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Lu-productos-menu li {
+  margin-bottom: 0.8rem;
+}
+
+.Lu-productos-menu a {
+  color: #eee;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  display: block;
+}
+
+.Lu-productos-menu a:hover {
+  color: #39FF14;
+  text-shadow: 0 0 3px #39FF14;
+}
+
+/* Admin Product Image */
+.Lu-imagen-producto {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.Lu-admin-product-img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+/* Ver Producto */
+.Lu-datos-producto {
+  background-color: #1a1a1a;
+  border: 1px solid #1E90FF;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 15px rgba(30, 144, 255, 0.3);
+}
+
+.Lu-especificaciones-ver {
+  list-style: none;
+  padding: 0;
+}
+
+.Lu-especificaciones-ver h2 {
+  font-family: Orbitron, sans-serif;
+  color: #00ff00;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.Lu-especificaciones-ver li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.Lu-mostrar-usuario {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    font-size: 2em;
-    gap: 10px; /* espacio entre logo y texto */
-  }
-  
-  h1 .logo {
-    width: 125px;  /* ajusta el tamaño según tu logo */
-    height: auto;
-  }
-
-  .product-card {
-    position: relative;
-    padding: 20px;
-    background: black; /* para que contraste con las imágenes */
-    border-radius: 10px;
-    overflow: hidden;
-    z-index: 0;
-    margin: 10px;
-    height: auto;
-    width: 60%;
-    box-sizing: content-box;
-    font-size: small;
-    color: #D3D3D3;
-  }
-  .product-img{
-    height: auto;
     width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  .product-card1{
-    position: relative;
-    padding: 20px;
-    background: black; /* para que contraste con las imágenes */
-    border-radius: 10px;
-    overflow: hidden;
-    z-index: 0;
-    margin: 10px;
-    height: 290px;
-    width: 270px;
-    box-sizing: content-box;
-    font-size: smaller;
-  }
-  .product-card1::before {
-    content: "";
-    position: absolute;
-    top: -3px; bottom: -3px;
-    left: -3px; right: -3px;
-    border-radius: 20px;
-    background: linear-gradient(270deg ,
-     #1e90ff, #186ec4,#0d263f,#13365a,#13365a,#13365a,#1e90ff,#186ec4);
-    background-size: 1400% 1400%;
-    animation: rgb-border 10s linear infinite;
-    z-index: -1;
-  }
+    max-width: 600px;
+    margin-top: 2rem;
+    background-color: #1a1a1a;
+    border: 1px solid #1E90FF;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.3);
+}
 
-  
-  /* Borde RGB animado */
-  .product-card::before {
+.Lu-mostrar-usuario-informacion {
+    margin-top: 1.5rem;
+    text-align: left;
+    width: 100%;
+}
+
+.Lu-mostrar-usuario-informacion ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Lu-mostrar-usuario-informacion li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    color: #eee;
+}
+
+/* Main Nav (para el index.html) */
+.Lu-main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #333;
+  margin-bottom: 2rem;
+}
+
+.Lu-main-nav a {
+  color: #eee;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Lu-main-nav a:hover {
+  background-color: #1E90FF;
+  color: #fff;
+}
+
+.Lu-main-nav .Lu-login, .Lu-main-nav .Lu-register {
+  background-color: #39FF14;
+  color: #000;
+  border: 1px solid #39FF14;
+}
+
+.Lu-main-nav .Lu-login:hover, .Lu-main-nav .Lu-register:hover {
+  background-color: #1E90FF;
+  color: #fff;
+  border-color: #1E90FF;
+}
+
+/* Hero Section */
+.Lu-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #0a0a0a;
+  border-bottom: 1px solid #39FF14;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.Lu-hero-text h2 {
+  font-family: Orbitron, sans-serif;
+  font-size: 3rem;
+  color: #00e5ff;
+  text-shadow: 0 0 10px #00e5ff;
+  margin-bottom: 1rem;
+}
+
+.Lu-hero-text p {
+  font-size: 1.2rem;
+  color: #eee;
+}
+
+.Lu-hero-text strong {
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.Lu-hero-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.Lu-hero-button {
+  margin-top: 2rem;
+}
+
+.Lu-button-highlights {
+  background-color: #1E90FF;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(30, 144, 255, 0.7);
+}
+
+.Lu-button-highlights:hover {
+  background-color: #00e5ff;
+  transform: scale(1.1);
+}
+
+.Lu-button-highlights img {
+  filter: brightness(0) invert(1);
+}
+
+/* Product Grid */
+.Lu-product-grid {
+  width: 100%;
+  padding: 1rem;
+}
+
+.Lu-product-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.Lu-product-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Lu-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 255, 0, 0.4);
+}
+
+.Lu-product-card::before {
     content: "";
     position: absolute;
     top: -3px; bottom: -3px;
     left: -3px; right: -3px;
     border-radius: 12px;
-    background: linear-gradient(270deg,
-      red, orange, yellow, green, blue, indigo, violet, red);
+    background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
     background-size: 1400% 1400%;
     animation: rgb-border 10s linear infinite;
     z-index: -1;
-  }
-  
-  /* Fondo blanco para interior */
-  .product-card::after {
+}
+
+.Lu-product-card::after {
     content: "";
     position: absolute;
     top: 3px; bottom: 3px;
     left: 3px; right: 3px;
-    background: black; /* igual que el fondo del producto */
+    background: black;
     border-radius: 7px;
     z-index: -1;
-  }
-  
-  @keyframes rgb-border {
+}
+
+.Lu-product-img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  border: 1px solid #1E90FF;
+}
+
+.Lu-product-name {
+  font-family: Orbitron, sans-serif;
+  font-size: 1.3rem;
+  color: #00e5ff;
+  margin-bottom: 0.5rem;
+}
+
+.Lu-product-atributes, .Lu-product-price {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 0.3rem;
+}
+
+/* Clases con prefijo Lu- para el resto de los estilos */
+.Lu-botonesEditar {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 2rem;
+}
+
+.Lu-botonesEditar li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 10px;
+}
+
+.Lu-editar-boton, .Lu-boton-ver, .Lu-subir-archivo {
+  background-color: #39FF14;
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.Lu-editar-boton:hover, .Lu-boton-ver:hover, .Lu-subir-archivo:hover {
+  background-color: #1E90FF;
+  color: #fff;
+}
+
+.Lu-input-editar, .Lu-nuevo-usuario, .Lu-codigo-ver-producto, .Lu-newsletter {
+  flex-grow: 1;
+  padding: 0.75rem;
+  border: 1px solid #1E90FF;
+  background-color: #0d0d0d;
+  color: #eee;
+  border-radius: 5px;
+  min-width: 150px;
+}
+
+.Lu-input-editar::placeholder, .Lu-nuevo-usuario::placeholder, .Lu-codigo-ver-producto::placeholder {
+  color: #bbb;
+}
+
+.Lu-boton-nuevo-usuario {
+  background-color: #39FF14;
+  color: #000;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 1.5rem;
+  align-self: center;
+}
+
+.Lu-boton-nuevo-usuario:hover {
+  background-color: #1E90FF;
+  color: #fff;
+}
+
+.Lu-productos-menu {
+  background-color: #1a1a1a;
+  border: 1px solid #39FF14;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+}
+
+.Lu-productos-menu p {
+  font-family: Orbitron, sans-serif;
+  font-size: 1.5rem;
+  color: #00e5ff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px #00e5ff;
+}
+
+.Lu-productos-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Lu-productos-menu li {
+  margin-bottom: 0.8rem;
+}
+
+.Lu-productos-menu a {
+  color: #eee;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  display: block;
+}
+
+.Lu-productos-menu a:hover {
+  color: #39FF14;
+  text-shadow: 0 0 3px #39FF14;
+}
+
+.Lu-imagen-producto {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.Lu-admin-product-img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+.Lu-datos-producto {
+  background-color: #1a1a1a;
+  border: 1px solid #1E90FF;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 15px rgba(30, 144, 255, 0.3);
+}
+
+.Lu-especificaciones-ver {
+  list-style: none;
+  padding: 0;
+}
+
+.Lu-especificaciones-ver h2 {
+  font-family: Orbitron, sans-serif;
+  color: #00ff00;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.Lu-especificaciones-ver li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.Lu-mostrar-usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 2rem;
+    background-color: #1a1a1a;
+    border: 1px solid #1E90FF;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.3);
+}
+
+.Lu-mostrar-usuario-informacion {
+    margin-top: 1.5rem;
+    text-align: left;
+    width: 100%;
+}
+
+.Lu-mostrar-usuario-informacion ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Lu-mostrar-usuario-informacion li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    color: #eee;
+}
+
+.Lu-main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #333;
+  margin-bottom: 2rem;
+}
+
+.Lu-main-nav a {
+  color: #eee;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Lu-main-nav a:hover {
+  background-color: #1E90FF;
+  color: #fff;
+}
+
+.Lu-main-nav .Lu-login, .Lu-main-nav .Lu-register {
+  background-color: #39FF14;
+  color: #000;
+  border: 1px solid #39FF14;
+}
+
+.Lu-main-nav .Lu-login:hover, .Lu-main-nav .Lu-register:hover {
+  background-color: #1E90FF;
+  color: #fff;
+  border-color: #1E90FF;
+}
+
+.Lu-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #0a0a0a;
+  border-bottom: 1px solid #39FF14;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.Lu-hero-text h2 {
+  font-family: Orbitron, sans-serif;
+  font-size: 3rem;
+  color: #00e5ff;
+  text-shadow: 0 0 10px #00e5ff;
+  margin-bottom: 1rem;
+}
+
+.Lu-hero-text p {
+  font-size: 1.2rem;
+  color: #eee;
+}
+
+.Lu-hero-text strong {
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.Lu-hero-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.Lu-hero-button {
+  margin-top: 2rem;
+}
+
+.Lu-button-highlights {
+  background-color: #1E90FF;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(30, 144, 255, 0.7);
+}
+
+.Lu-button-highlights:hover {
+  background-color: #00e5ff;
+  transform: scale(1.1);
+}
+
+.Lu-button-highlights img {
+  filter: brightness(0) invert(1);
+}
+
+.Lu-product-grid {
+  width: 100%;
+  padding: 1rem;
+}
+
+.Lu-product-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.Lu-product-card {
+  position: relative;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Lu-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 255, 0, 0.4);
+}
+
+.Lu-product-card::before {
+    content: "";
+    position: absolute;
+    top: -3px; bottom: -3px;
+    left: -3px; right: -3px;
+    border-radius: 12px;
+    background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
+    background-size: 1400% 1400%;
+    animation: Lu-rgb-border 10s linear infinite;
+    z-index: -1;
+}
+
+.Lu-product-card::after {
+    content: "";
+    position: absolute;
+    top: 3px; bottom: 3px;
+    left: 3px; right: 3px;
+    background: black;
+    border-radius: 7px;
+    z-index: -1;
+}
+
+@keyframes Lu-rgb-border {
     0% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
     100% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
     }
-  }
-  .titulo-login{
-    position: relative;
-    display: block;
-    margin: 0;
-    padding: 0;
-    color: #D3D3D3;
-    font-size: x-large;
+}
 
-  }
-  .btn-btn-primary{
-    background-color: #39FF14;
-    top: 200px;
-    left: 100px;
-  }
-  .inicio-sesion{
-    padding: 10px;
-    margin: 10px;
-    background-color: #000000;
-    position: relative;
-    top: 200px;
-  }
-  .main-container{
-    padding: 5px;
-    margin: 5px;
-  }
-  .form-label{
-    color: #000000;
-    padding: 1px;
-    margin: 1px;
-    top: 200px;
-    left: 100px;
-  }
-  .form-control{
-    
-    padding: 1px;
-    margin: 1px;
-    top: 200px;
-    left: 100px;
-  }
-  .text-center{
-    
-    margin: 1px;
-    padding: 1px;
-    top: 190px;
-    left: 150px;
-  }
-  .tituloRegistrar{
-    color: #D3D3D3;
-  }
-  .Registrar-Usuario{
-    display: block;
-    background-color: #000000;
-  }
-  .parrafo{
-    position: relative;
-    text-align: left;
-    top: 40px;
-  }
-  .informacion{
-    position: relative;
-    top: 20px;
-  }
-  .nav-a{
-    margin: 0;
-    padding: 0;
-    position: relative;
-    text-align: left;
-  }
-  .row{
-    color: #D3D3D3;
-    margin: 1px;
-    padding: 1px;
-  }
-  .articulos{
-    display: block;
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-  }
-  .img-fluid{
-    position: relative;
-    top: 3px;
-    margin: 0;
-    padding: 30px;
-  }
+.Lu-product-img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  border: 1px solid #1E90FF;
+}
 
-  .formulario{
-    color: #D3D3D3;
-    position: relative;
-    padding: 10px;
-    margin: 1px;
-  
-  }
-  .informacion-contacto{
-    position: relative;
-    color: #D3D3D3;
-    font-size: larger;
-    top: 190px;
-  }
-  .nombre-campo{
-    position: relative;
-    color: #D3D3D3;
-    font-size: larger;
-    top: 60px;
-    padding: 9px;
-    margin: 9px;
-  }
-  .email-campo{
-    position: relative;
-    font-size: larger;
-    color: #D3D3D3;
-    top: 60px;
-    left: -43px;
-    padding: 9px;
-    margin: 9px;
+.Lu-product-name {
+  font-family: Orbitron, sans-serif;
+  font-size: 1.3rem;
+  color: #00e5ff;
+  margin-bottom: 0.5rem;
+}
 
-  }
-  .mensaje-campo{
-    position: relative;
-    font-size: larger;
-    color: #D3D3D3;
-    top: 60px;
-    padding: 9px;
-    margin: 9px;
-  }
-  .boton-primario{
-    position: absolute;
-    font-size: small;
-    position: relative;
-    top: 70px;
-    left: 15px;
-  }
-  .titulo-contacto{
-    position: relative;
-    font-size: x-large;
-    color: #D3D3D3;
-    text-align: center;
+.Lu-product-atributes, .Lu-product-price {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 0.3rem;
+}
 
-  }
-  .imagen-logo{
-    position: relative;
-    top: 100px;
-  }
-  .nave-a{
-    position: absolute;
-    left: 0px;
+/* Media Queries para Responsive */
+@media (min-width: 768px) {
+    .Lu-product-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-  }
-  .navega-a{
-    position: absolute;
-    top: 30px;
-    left: 5px;
-  }
-  .contenedor{
-    text-align: center;
-    background-color: #141414;
-  }
-  .imagen-registrar{
-    position: absolute;
-    margin: 0px;
-    padding: 0;
-    top: -5px;
-    left: 46%
-  }
-  .Contenido{
-    position: absolute;
-    top: 120px;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    background-color: #1e90ff;
-    font-size: small;
-  }
+@media (min-width: 992px) {
+    .Lu-product-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
-  .parrafo{
-    position: relative;
-    top: 3px;
-    margin: 1px;
-    padding: 1px;
-  }
-  .imagen-contenido{
-    position: relative;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-  }
+@media (max-width: 768px) {
+    .Lu-branding h1 {
+        font-size: 1.5rem;
+    }
+    .Lu-home-button {
+        margin-top: 0.5rem;
+        margin-left: 0;
+    }
+    .Lu-main-header h1 {
+        font-size: 2rem;
+    }
+    .Lu-footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .Lu-footer-branding, .Lu-footer-credit-cards, .Lu-footer-nav {
+        flex: 1 1 100%;
+        margin-bottom: 1rem;
+    }
+    .Lu-main-nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .Lu-main-nav a {
+        width: 100%;
+        text-align: center;
+    }
+    .Lu-hero-text h2 {
+        font-size: 2.2rem;
+    }
+    .Lu-hero-text p {
+        font-size: 1rem;
+    }
+    .Lu-product-list {
+        grid-template-columns: 1fr;
+    }
+    .Lu-botonesEditar li {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .Lu-editar-boton, .Lu-input-editar, .Lu-subir-archivo, .Lu-boton-ver {
+        width: 100%;
+    }
+}
 
-  
-  
-  
-  
-  
+@media (max-width: 480px) {
+    .Lu-branding h1 {
+        font-size: 1.2rem;
+    }
+    .Lu-main-header h1 {
+        font-size: 1.8rem;
+    }
+    .Lu-hero-text h2 {
+        font-size: 1.8rem;
+    }
+    .Lu-hero-text p {
+        font-size: 0.9rem;
+    }
+    .Lu-button-highlights {
+        width: 50px;
+        height: 50px;
+    }
+    .Lu-productos-menu {
+        padding: 1rem;
+    }
+    .Lu-productos-menu p {
+        font-size: 1.2rem;
+    }
+    .Lu-datos-producto, .Lu-mostrar-usuario {
+        padding: 1.5rem;
+    }
+}
