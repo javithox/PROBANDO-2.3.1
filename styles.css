@@ -1,0 +1,567 @@
+@font-face {
+  font-family: Orbitron;
+  src: url(fonts/orbitron-black.otf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Black.ttf);
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  color: aliceblue;
+  font-family: Roboto;
+}
+
+.Lu-home-button {
+  color: #1E90FF;
+}
+
+.Lu-productos-menu {
+  padding: 150px;
+}
+
+.Lu-branding {
+  font-family: Orbitron;
+  background-color: #060606;
+  border: 1px solid #1E90FF;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.Lu-boton-nuevo-usuario {
+  background-color: #39FF14;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  color: #39FF14;
+}
+
+.Lu-nuevo-usuario {
+  display: flex;
+  justify-content: center;
+}
+
+.Lu-role-name {
+  color: red;
+}
+
+.Lu-main-header {
+  
+}
+
+.Lu-main-container {
+  display: flex;
+  background-color: #000000;
+  border: #39FF14;
+  border-color: #39FF14;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.Lu-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.Lu-editar-boton {
+  background-color: #39FF14;
+  justify-content: center;
+}
+
+.Lu-input-editar {
+  
+}
+
+.Lu-imagen-producto {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.Lu-admin-product-img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+.Lu-footer-container {
+  background-color: #222;
+  color: #eee;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.Lu-footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.Lu-footer-branding {
+  flex: 1 1 250px;
+}
+
+.Lu-site-name {
+  margin: 0 0 8px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.Lu-additional-information {
+  margin: 0;
+  color: #bbb;
+}
+
+.Lu-footer-credit-cards {
+  flex: 1 1 150px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Lu-credit-card-image {
+  height: 30px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.Lu-credit-card-image:hover {
+  filter: brightness(1) invert(0);
+  cursor: pointer;
+}
+
+.Lu-footer-nav {
+  flex: 1 1 150px;
+  text-align: center;
+}
+
+.Lu-footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Lu-footer-nav ul li {
+  margin: 8px 0;
+}
+
+.Lu-footer-nav ul li a {
+  color: #eee;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.Lu-footer-nav ul li a:hover {
+  color: #ff9800;
+}
+
+.Lu-footer-newsletter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.Lu-newsletter {
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  width: 250px;
+  max-width: 100%;
+}
+
+.Lu-subscribe-button {
+  padding: 10px 20px;
+  background-color: #39FF14;
+  color: #222;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Lu-subscribe-button:hover {
+  background-color: #e68a00;
+}
+
+.Lu-footer-copy {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  margin: 0;
+}
+
+@font-face {
+
+    font-family: Orbitron;
+  
+    src: url(fonts/orbitron-black.otf);
+  
+  }
+  
+  
+  
+  @font-face {
+  
+    font-family: Roboto;
+  
+    src: url(fonts/Roboto-Black.ttf);
+  
+  }
+  
+  
+  
+  .main{background-color: black;
+  
+  color:aliceblue;
+  
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+  
+  .main-header{
+    color: rgb(255, 255, 255);
+    align-content: center;
+    position: relative;
+    text-align: center;
+  ;}
+  
+  .main-header{
+  
+    font-family: Orbitron;
+  
+  }
+  
+  
+  
+  body{background-color: black;}
+  
+  .button-highlights{background-color: #1e90ff;}
+  
+  
+  
+  .hero-text{
+  
+    color: #D3D3D3;
+  
+  
+  
+  }
+  
+  .product-list {
+  
+    display: grid;
+  
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  
+    gap: 20px; /* espacio entre elementos */
+  
+    list-style: none; /* quitar puntos si es <ul> */
+  
+    padding: 0;
+    margin: 0;
+    
+  
+   }
+   h1 {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    gap: 10px; /* espacio entre logo y texto */
+  }
+  
+  h1 .logo {
+    width: 125px;  /* ajusta el tamaño según tu logo */
+    height: auto;
+  }
+
+  .product-card {
+    position: relative;
+    padding: 20px;
+    background: black; /* para que contraste con las imágenes */
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 0;
+    margin: 10px;
+    height: auto;
+    width: 60%;
+    box-sizing: content-box;
+    font-size: small;
+    color: #D3D3D3;
+  }
+  .product-img{
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .product-card1{
+    position: relative;
+    padding: 20px;
+    background: black; /* para que contraste con las imágenes */
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 0;
+    margin: 10px;
+    height: 290px;
+    width: 270px;
+    box-sizing: content-box;
+    font-size: smaller;
+  }
+  .product-card1::before {
+    content: "";
+    position: absolute;
+    top: -3px; bottom: -3px;
+    left: -3px; right: -3px;
+    border-radius: 20px;
+    background: linear-gradient(270deg ,
+     #1e90ff, #186ec4,#0d263f,#13365a,#13365a,#13365a,#1e90ff,#186ec4);
+    background-size: 1400% 1400%;
+    animation: rgb-border 10s linear infinite;
+    z-index: -1;
+  }
+
+  
+  /* Borde RGB animado */
+  .product-card::before {
+    content: "";
+    position: absolute;
+    top: -3px; bottom: -3px;
+    left: -3px; right: -3px;
+    border-radius: 12px;
+    background: linear-gradient(270deg,
+      red, orange, yellow, green, blue, indigo, violet, red);
+    background-size: 1400% 1400%;
+    animation: rgb-border 10s linear infinite;
+    z-index: -1;
+  }
+  
+  /* Fondo blanco para interior */
+  .product-card::after {
+    content: "";
+    position: absolute;
+    top: 3px; bottom: 3px;
+    left: 3px; right: 3px;
+    background: black; /* igual que el fondo del producto */
+    border-radius: 7px;
+    z-index: -1;
+  }
+  
+  @keyframes rgb-border {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  .titulo-login{
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: #D3D3D3;
+    font-size: x-large;
+
+  }
+  .btn-btn-primary{
+    background-color: #39FF14;
+    top: 200px;
+    left: 100px;
+  }
+  .inicio-sesion{
+    padding: 10px;
+    margin: 10px;
+    background-color: #000000;
+    position: relative;
+    top: 200px;
+  }
+  .main-container{
+    padding: 5px;
+    margin: 5px;
+  }
+  .form-label{
+    color: #000000;
+    padding: 1px;
+    margin: 1px;
+    top: 200px;
+    left: 100px;
+  }
+  .form-control{
+    
+    padding: 1px;
+    margin: 1px;
+    top: 200px;
+    left: 100px;
+  }
+  .text-center{
+    
+    margin: 1px;
+    padding: 1px;
+    top: 190px;
+    left: 150px;
+  }
+  .tituloRegistrar{
+    color: #D3D3D3;
+  }
+  .Registrar-Usuario{
+    display: block;
+    background-color: #000000;
+  }
+  .parrafo{
+    position: relative;
+    text-align: left;
+    top: 40px;
+  }
+  .informacion{
+    position: relative;
+    top: 20px;
+  }
+  .nav-a{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: left;
+  }
+  .row{
+    color: #D3D3D3;
+    margin: 1px;
+    padding: 1px;
+  }
+  .articulos{
+    display: block;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+  }
+  .img-fluid{
+    position: relative;
+    top: 3px;
+    margin: 0;
+    padding: 30px;
+  }
+
+  .formulario{
+    color: #D3D3D3;
+    position: relative;
+    padding: 10px;
+    margin: 1px;
+  
+  }
+  .informacion-contacto{
+    position: relative;
+    color: #D3D3D3;
+    font-size: larger;
+    top: 190px;
+  }
+  .nombre-campo{
+    position: relative;
+    color: #D3D3D3;
+    font-size: larger;
+    top: 60px;
+    padding: 9px;
+    margin: 9px;
+  }
+  .email-campo{
+    position: relative;
+    font-size: larger;
+    color: #D3D3D3;
+    top: 60px;
+    left: -43px;
+    padding: 9px;
+    margin: 9px;
+
+  }
+  .mensaje-campo{
+    position: relative;
+    font-size: larger;
+    color: #D3D3D3;
+    top: 60px;
+    padding: 9px;
+    margin: 9px;
+  }
+  .boton-primario{
+    position: absolute;
+    font-size: small;
+    position: relative;
+    top: 70px;
+    left: 15px;
+  }
+  .titulo-contacto{
+    position: relative;
+    font-size: x-large;
+    color: #D3D3D3;
+    text-align: center;
+
+  }
+  .imagen-logo{
+    position: relative;
+    top: 100px;
+  }
+  .nave-a{
+    position: absolute;
+    left: 0px;
+
+  }
+  .navega-a{
+    position: absolute;
+    top: 30px;
+    left: 5px;
+  }
+  .contenedor{
+    text-align: center;
+    background-color: #141414;
+  }
+  .imagen-registrar{
+    position: absolute;
+    margin: 0px;
+    padding: 0;
+    top: -5px;
+    left: 46%
+  }
+  .Contenido{
+    position: absolute;
+    top: 120px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    background-color: #1e90ff;
+    font-size: small;
+  }
+
+  .parrafo{
+    position: relative;
+    top: 3px;
+    margin: 1px;
+    padding: 1px;
+  }
+  .imagen-contenido{
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+
+  
+  
+  
+  
+  
