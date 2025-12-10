@@ -1,126 +1,75 @@
+/* --- ESTILOS GENERALES --- */
 body {
-    background: #181818;
+    background: #000;
     color: #f5f5f5;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.main-container {
-    max-width: 500px;
-    margin: 40px auto;
-    background: #222;
-    border-radius: 12px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
-    padding: 32px;
-}
-
-.contenedor {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-.titulo-contacto {
-    color: #39ff14;
-    font-size: 2rem;
+/* Colores de texto personalizados */
+.Lu-electric-blue-text {
+    color: #1E90FF;
+    text-shadow: 0 0 10px rgba(30, 144, 255, 0.4);
     font-weight: bold;
-    margin-bottom: 18px;
-    text-align: center;
 }
 
-.logo-contacto {
-    border-radius: 50%;
-    margin-bottom: 18px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
-    width: 90px;
-    height: 90px;
+/* --- TARJETA PRINCIPAL --- */
+.Lu-contact-card {
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 15px;
 }
 
-.navega-a {
-    color: #39ff14;
-    text-decoration: none;
-    font-weight: 500;
-    margin-bottom: 24px;
-    display: inline-block;
-    font-size: 1.1rem;
+/* --- INPUTS PERSONALIZADOS (Sobrescribe Bootstrap) --- */
+.Lu-input-dark {
+    background-color: #1a1a1a !important;
+    border: 1px solid #333 !important;
+    color: #fff !important;
+    padding: 12px;
 }
 
-.navega-a:hover {
-    text-decoration: underline;
+.Lu-input-dark:focus {
+    background-color: #000 !important;
+    border-color: #39FF14 !important; /* Verde al enfocar */
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.3) !important;
 }
 
-.formulario {
-    width: 100%;
-    margin-top: 16px;
-}
-
-.campo {
-    margin-bottom: 18px;
-    display: flex;
-    flex-direction: column;
-}
-
-.campo label {
-    margin-bottom: 6px;
-    font-weight: 500;
-    color: #39ff14;
-}
-
-.campo input,
-.campo textarea {
-    border-radius: 6px;
-    border: none;
-    padding: 10px;
-    font-size: 1rem;
-    background: #222;
-    color: #f5f5f5;
-    margin-bottom: 4px;
-    resize: vertical;
-}
-
-.campo input:focus,
-.campo textarea:focus {
-    outline: 2px solid #39ff14;
-}
-
-.boton-primario {
-    border: none;
-    border-radius: 6px;
-    padding: 10px 24px;
-    font-size: 1rem;
-    color: #fff;
+/* --- BOTÓN DE ENVIAR --- */
+.Lu-boton-enviar {
     background-color: #1E90FF;
-    cursor: pointer;
-    transition: background 0.2s;
-    margin-bottom: 24px;
-    width: 100%;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
-.boton-primario:hover {
-    background-color: #1565c0;
+.Lu-boton-enviar:hover {
+    background-color: #39FF14;
+    color: black;
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+    transform: translateY(-2px);
 }
 
-.informacion-contacto {
-    background: #1a1a1a;
-    border-radius: 8px;
-    padding: 18px;
-    margin-top: 16px;
-    text-align: left;
-    width: 100%;
-    color: #fff;
+/* --- PANEL LATERAL DE INFORMACIÓN --- */
+.Lu-info-panel {
+    background: linear-gradient(145deg, #1a1a1a 0%, #0d0d0d 100%);
+    border-left: 1px solid #333;
+    position: relative;
 }
 
-.informacion-contacto h3 {
-    color: #39ff14;
-    margin-bottom: 12px;
+/* Ajuste responsive para el borde del panel */
+@media (max-width: 767px) {
+    .Lu-info-panel {
+        border-left: none;
+        border-top: 1px solid #333;
+    }
 }
 
-.informacion-contacto a {
-    color: #39ff14;
-    text-decoration: none;
-}
-
-.informacion-contacto a:hover {
-    text-decoration: underline;
+.hover-green:hover {
+    color: #39FF14 !important;
+    transition: color 0.3s;
 }

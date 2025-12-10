@@ -1,37 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Comunidad Gamer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesblog.css">
 </head>
-<body>
-    <main class="main-container">
-        <div class="row">
-            <h2 class="titulo-blog">Comunidad Gamer 2</h2>
-            <a href="index.html">Inicio</a>
-            <div class="col-md-8">
-                
-                
-                <img src="https://blog.movistar.com.co/wp-content/uploads/2024/03/plataformas-de-juegos-800x445.webp" alt="imagen" height="50%" width="50%" class="img-fluid">
-                <p>Este blog es para la comunidad gamer 2 deja tu comentario sobre algun juego que juegues</p>
-            </div>
-            <div class="articulos">
-                <form>
-                    <textarea rows="5" cols="50"></textarea><br><br>
-                    <input type="submit" value="Enviar comentario" style="background-color: #1E90FF;">
-                </form>
-                <h3>Otro Blogs</h3>
-                <ul>
-                    <li><a href="blogs.html">Blog 1</a></li>
-                    <li><a href="blog2.html">Blog 3</a></li>
-                </ul>
-            </div>
-        </div>
-
-        
-    </main>
+<body class="bg-black">
     
+    <header class="container pt-4 pb-2">
+        <div class="d-flex justify-content-between align-items-center border-bottom border-success pb-2">
+            <h1 class="h3 m-0 text-white">LEVEL UP BLOG</h1>
+            <a href="index.html" class="btn btn-outline-success btn-sm">Volver al Inicio</a>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <div class="row g-4">
+            
+            <div class="col-12 col-lg-8">
+                <div class="blog-card p-4">
+                    <h2 class="titulo-blog mb-3">Comunidad Gamer 2</h2> <div class="text-center mb-4">
+                        <img src="https://www.obicex.es/sites/obicex/files/styles/blog/public/images/blog/gamer-jugador-profesionales.jpg?itok=_yhzT2iQ" 
+                             alt="Imagen Blog" 
+                             class="img-fluid rounded border border-secondary shadow w-100"
+                             style="max-height: 400px; object-fit: cover;"> </div>
+
+                    <div class="contenido-texto">
+                        <p>Este blog es para la comunidad gamer de Duoc UC. Cada usuario puede dejar su comentario aquí abajo en el siguiente recuadro.</p> </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+                <div class="sidebar-card p-4 h-100">
+                    
+                    <h3 class="text-white h4 mb-3">Comentarios</h3>
+                    <form action="#" class="mb-5">
+                        <div class="mb-3">
+                            <textarea class="form-control bg-dark text-light border-secondary" rows="5" placeholder="Escribe tu opinión..."></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary fw-bold">ENVIAR COMENTARIO</button>
+                        </div>
+                    </form>
+
+                    <h3 class="text-white h4 mb-3 border-top border-secondary pt-4">Otros Blogs</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="blog1.html" class="text-decoration-none d-block p-2 rounded hover-effect">
+                                🎮 Comunidad Gamer 2
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="blog2.html" class="text-decoration-none d-block p-2 rounded hover-effect">
+                                ⚔️ Comunidad Gamer 3 (RPG)
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="blogs.html" class="text-decoration-none d-block p-2 rounded hover-effect">
+                                🏆 Blog Principal
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-4 text-secondary mt-auto border-top border-dark">
+        <p class="m-0">&copy; 2025 Level Up Community</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
