@@ -1,60 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registrarse</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main class="main-container" style="width: 100%; height: auto;">
-        <a href="index.html">Home</a>
-        <img style="position: absolute;" class="imagen-registrar" src="logo-image/a5bf3767-771b-49cf-83f8-f3745cde7097.jpg" width="90px" height="90px">
-        <div class="row justify-content-center">
-                <div class=" col-md-6 col-lg-5">
+    
+    <header class="Lu-branding justify-content-between align-items-center p-3">
+        <div class="d-flex align-items-center gap-3">
+             <h1 class="m-0 fs-3">REGISTRO</h1>
+        </div>
+        <a class="Lu-home-button" href="index.html">Home</a>
+    </header>
+
+    <main class="Lu-main-container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                
+                <div class="col-12 col-md-8 col-lg-5">
                     
-                    <form action="#" method="post" class="p-4 border rounded shadow-sm justify-content-center" >
-                        <div class="Registrar-Usuario">
-                            <h1 class="tituloRegistrar">Registrarse</h1>
+                    <div class="text-center mb-4 position-relative">
+                        <img class="Lu-hero-img img-fluid rounded-circle border border-success shadow" 
+                             src="logo-image/a5bf3767-771b-49cf-83f8-f3745cde7097.jpg" 
+                             alt="Logo" 
+                             style="width: 120px; height: 120px; object-fit: cover; box-shadow: 0 0 15px #39FF14;">
+                    </div>
+
+                    <div class="Lu-register-card p-4 p-md-5">
+                        <h2 class="text-center Lu-electric-green-text mb-4" style="font-family: 'Orbitron', sans-serif;">CREAR CUENTA</h2>
+                        
+                        <form action="#" method="post">
+                            
                             <div class="mb-3">
-                                <label for="username" class="form-label">Nombre de Usuario</label>
-                                <input type="text" id="username" class="form-control" placeholder="Ingresa tu nombre de usuario" required autocomplete="username">
+                                <label for="username" class="form-label text-light">Nombre de Usuario</label>
+                                <input type="text" id="username" class="Lu-input-editar w-100" placeholder="Elige un usuario" required autocomplete="username">
                             </div>
 
                             <div class="mb-3">
-                                <label for="email" class="form-label">Correo</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="Ingrese su correo" required autocomplete="address-level1">
+                                <label for="email" class="form-label text-light">Correo Electrónico</label>
+                                <input type="email" id="email" name="email" class="Lu-input-editar w-100" placeholder="ejemplo@correo.com" required autocomplete="email">
                             </div>
 
                             <div class="mb-3">
-                                <label for="password" class="form-label">Contraseña</label>
-                                <input type="password" id="password" name="password" class="form-control" placeholder="Ingrese su contraseña" required autocomplete="current-password">
+                                <label for="password" class="form-label text-light">Contraseña</label>
+                                <input type="password" id="password" name="password" class="Lu-input-editar w-100" placeholder="Crea una contraseña segura" required autocomplete="new-password">
                             </div>
 
-                            <div class="mb-3">
-                                <label for="CONTACTO" class="form-label">Contacto</label>
-                                <input type="number" id="Contacto" name="Contacto" class="form-control" placeholder="Ingrese su contacto" required autocomplete="cc-number">
+                            <div class="mb-4">
+                                <label for="Contacto" class="form-label text-light">Contacto</label>
+                                <input type="number" id="Contacto" name="Contacto" class="Lu-input-editar w-100" placeholder="Número de teléfono" required autocomplete="tel">
                             </div>
 
-                            <div class="d-grid mb-3">
-                                <button type="submit" class="btn-btn-primary">Registrarse</button>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="Lu-boton-nuevo-usuario mt-0 w-100">REGISTRARSE</button>
                             </div>
                             
-                            <div class="text-center">
-                                <a href="login.html" class="text-decoration-none">¿ya tiene cuenta?Iniciar sesion</a>
+                            <div class="text-center mt-3">
+                                <a href="login.html" class="text-decoration-none Lu-electric-blue-text small">¿Ya tienes cuenta? Inicia sesión aquí.</a>
                             </div>
-                        </div>
-                            
 
-                    </form>
+                        </form>
+                    </div>
 
                 </div>
-
             </div> 
-        
+        </div>
     </main>
     
+    <footer class="Lu-footer-container text-center mt-auto">
+        <p class="Lu-footer-copy">&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
 </body>

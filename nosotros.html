@@ -1,45 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Nosotros - Level Up</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="stylesNosotros.css">
 </head>
 <body class="bg-black">
-    <main class="main-container">
-        <section class="main-header">
-            
-            <div class="informacion">
-                <h1 class="titulo-nosotros">Sobre nosotros</h1>
-                <div class="nav-a">
-                    <a style="color: #39FF14;" href="index.html">Inicio</a>
-                </div>
-                <div class="Contenido">
-                    <img class="imagen-contenido" src="logo-image/a5bf3767-771b-49cf-83f8-f3745cde7097.jpg" alt="imagen" width="290px" height="190px">
-                    <p class="parrafo">esta pagina se encargar de vender productos a buenos precios imperdibles todo a buenos descuentos para todo jugador gamer de baja gama como los de gamas altas nosotros </p>
-                </div>
-                
-            </div>
-                
-        </section>
+    
+    <header class="container-fluid py-3 mb-4 border-bottom border-secondary">
+        <div class="d-flex justify-content-between align-items-center container">
+            <h1 class="m-0 text-white fs-3">LEVEL UP</h1>
+            <a class="link-inicio" href="index.html">Inicio</a>
+        </div>
+    </header>
 
-        <section class="main-header" style="position: relative; top: 220px;">
-            
-            <div class="informacion">
-                <div class="Contenido">
-                    <img class="imagen-contenido" src="images/images.jpg" alt="imagen" width="290px" height="190px">
-                    <p class="parrafo">Esta comunidad esta atenta a los sucesos o hecho que suceden en los juegos o junto a la experiencia del jugador</p>
-                </div>
-                
-            </div>
-                
-        </section>
-
+    <main class="container">
         
+        <div class="text-center mb-5">
+            <h1 class="titulo-nosotros display-4">SOBRE NOSOTROS</h1>
+            <p class="text-secondary">Conoce nuestra misión y comunidad.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center align-items-stretch">
+            
+            <div class="col-12 col-md-6 col-lg-5">
+                <div class="contenido h-100 d-flex flex-column align-items-center text-center">
+                    <img class="imagen-contenido img-fluid mb-3" 
+                         src="logo-image/a5bf3767-771b-49cf-83f8-f3745cde7097.jpg" 
+                         alt="Logo Tienda">
+                    <h3 class="text-white mb-3">Nuestra Tienda</h3>
+                    <p class="parrafo">
+                        Esta página se encarga de vender productos a precios imperdibles. 
+                        Ofrecemos grandes descuentos tanto para jugadores de gama de entrada 
+                        como para entusiastas de gama alta.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-5">
+                <div class="contenido h-100 d-flex flex-column align-items-center text-center">
+                    <img class="imagen-contenido img-fluid mb-3" 
+                         src="images/images.jpg" 
+                         alt="Comunidad Gamer">
+                    <h3 class="text-white mb-3">Comunidad</h3>
+                    <p class="parrafo">
+                        Nuestra comunidad está atenta a los sucesos y hechos que ocurren 
+                        en el mundo gaming, priorizando siempre la experiencia del jugador.
+                    </p>
+                </div>
+            </div>
+
+        </div>
     </main>
+
+    <footer class="text-center mt-5 py-3 text-secondary">
+        <p>&copy; 2025 Level Up. Todos los derechos reservados.</p>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
 </body>
