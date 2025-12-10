@@ -1,0 +1,144 @@
+        :root {
+            --neon-green: #39FF14;
+            --neon-blue: #1E90FF;
+            --electric-blue: #00e5ff;
+            --bg-dark: #000000;
+            --bg-card: #1a1a1a;
+            --text-light: #eee;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: aliceblue;
+            font-family: 'Roboto', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Títulos con fuente Orbitron */
+        h1, h2, h3, h4, h5, .navbar-brand {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* --- Header / Navbar --- */
+        .Lu-branding {
+            background-color: #060606;
+            border-bottom: 1px solid var(--neon-blue);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            color: #fff !important;
+            text-shadow: 0 0 5px var(--neon-green);
+            font-size: 1.5rem;
+        }
+
+        /* --- Títulos Principales --- */
+        .Lu-main-header {
+            border-bottom: 1px solid var(--neon-green);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+        }
+
+        .Lu-main-header h2 {
+            color: var(--neon-blue);
+            text-shadow: 0 0 8px var(--neon-blue);
+        }
+
+        /* --- Tarjetas de Producto (Cart Items) --- */
+        .Lu-product-card {
+            background-color: var(--bg-card);
+            border: 1px solid #333;
+            color: var(--text-light);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden; /* Para contener efectos */
+        }
+
+        /* Efecto borde RGB animado (Simplificado para el carrito) */
+        .Lu-product-card:hover {
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+            border-color: var(--neon-green);
+        }
+
+        .img-carrito {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 1px solid var(--neon-blue);
+        }
+
+        /* --- Botones --- */
+        .btn-neon-primary {
+            background-color: var(--neon-green);
+            color: #000;
+            border: none;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-neon-primary:hover {
+            background-color: var(--neon-blue);
+            color: #fff;
+            box-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        /* Botones pequeños (+ / -) */
+        .btn-outline-neon {
+            color: var(--neon-blue);
+            border-color: var(--neon-blue);
+            background: transparent;
+        }
+        
+        .btn-outline-neon:hover {
+            background-color: var(--neon-blue);
+            color: #fff;
+        }
+
+        .input-cantidad {
+            background-color: #0d0d0d;
+            border: 1px solid var(--neon-blue);
+            color: #fff;
+        }
+
+        .btn-eliminar {
+            color: #ff3333;
+            text-shadow: 0 0 2px red;
+            transition: 0.3s;
+        }
+        
+        .btn-eliminar:hover {
+            color: #ff0000;
+            text-shadow: 0 0 8px red;
+        }
+
+        /* --- Resumen de Pago --- */
+        .card-resumen {
+            background-color: var(--bg-card);
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 10px rgba(30, 144, 255, 0.2);
+        }
+
+        .text-neon-price {
+            color: var(--neon-green);
+            text-shadow: 0 0 5px var(--neon-green);
+            font-weight: bold;
+        }
+
+        /* --- Footer --- */
+        .Lu-footer-container {
+            background-color: #111;
+            border-top: 1px solid #555;
+            margin-top: auto; /* Empuja el footer al fondo */
+            padding: 2rem 0;
+            color: #bbb;
+        }
+        
+        /* Ajustes Responsive extra */
+        @media (max-width: 768px) {
+            .Lu-main-header h2 { font-size: 1.8rem; }
+        }

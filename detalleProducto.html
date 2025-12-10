@@ -1,19 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito de Compras - Estilo Gamer</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styledetalleProductos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <main class="main-container">
-        <section class="main-header">
-            
 
+    <nav class="navbar navbar-dark Lu-branding mb-4">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">
+                <i class="bi bi-controller me-2"></i> GAMER ZONE
+            </span>
+            <a href="index.html" class="text-decoration-none" style="color: var(--neon-green);">
+                <i class="bi bi-house-door"></i> Inicio
+            </a>
+        </div>
+    </nav>
 
+    <main class="container mb-5">
+        
+        <section class="Lu-main-header text-center text-lg-start">
+            <h2 class="fw-bold"><i class="bi bi-cart3"></i> TU CARRITO</h2>
         </section>
 
+        <div class="row g-4">
+            
+            <div class="col-lg-8">
+                
+                <div class="card Lu-product-card mb-3 p-3" id="producto-1" data-precio="150.00">
+                    <div class="row align-items-center g-3">
+                        <div class="col-3 col-md-2 text-center">
+                            <img src="https://via.placeholder.com/150/0000FF/808080?text=Audio" class="img-fluid img-carrito" alt="Producto">
+                        </div>
+                        
+                        <div class="col-9 col-md-4">
+                            <h5 class="mb-1 text-info font-monospace">Audífonos Pro Gamer</h5>
+                            <p class="small mb-1 text-muted">Color: <span style="color: #fff;">Negro Mate</span></p>
+                            <div class="d-md-none mt-1 text-neon-price">$150.00</div>
+                        </div>
 
+                        <div class="col-6 col-md-3">
+                            <div class="input-group input-group-sm">
+                                <button class="btn btn-outline-neon btn-restar" type="button"><i class="bi bi-dash"></i></button>
+                                <input type="text" class="form-control text-center input-cantidad" value="1" readonly>
+                                <button class="btn btn-outline-neon btn-sumar" type="button"><i class="bi bi-plus"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3 text-end">
+                            <div class="d-none d-md-block h5 mb-2 text-neon-price">$150.00</div>
+                            <button class="btn btn-link btn-eliminar text-decoration-none p-0">
+                                <i class="bi bi-trash-fill"></i> ELIMINAR
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card Lu-product-card mb-3 p-3" id="producto-2" data-precio="299.50">
+                    <div class="row align-items-center g-3">
+                        <div class="col-3 col-md-2 text-center">
+                            <img src="https://via.placeholder.com/150/FF0000/FFFFFF?text=Reloj" class="img-fluid img-carrito" alt="Producto">
+                        </div>
+                        <div class="col-9 col-md-4">
+                            <h5 class="mb-1 text-info font-monospace">Smartwatch S5 Elite</h5>
+                            <p class="small mb-1 text-muted">Color: <span style="color: #fff;">Rojo Neón</span></p>
+                            <div class="d-md-none mt-1 text-neon-price">$299.50</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="input-group input-group-sm">
+                                <button class="btn btn-outline-neon btn-restar" type="button"><i class="bi bi-dash"></i></button>
+                                <input type="text" class="form-control text-center input-cantidad" value="1" readonly>
+                                <button class="btn btn-outline-neon btn-sumar" type="button"><i class="bi bi-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 text-end">
+                            <div class="d-none d-md-block h5 mb-2 text-neon-price">$299.50</div>
+                            <button class="btn btn-link btn-eliminar text-decoration-none p-0">
+                                <i class="bi bi-trash-fill"></i> ELIMINAR
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card card-resumen p-4 sticky-top" style="top: 20px; z-index: 10;">
+                    <h4 class="card-title mb-4 text-center text-uppercase" style="color: var(--neon-blue);">Resumen de Orden</h4>
+                    
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="text-muted">Subtotal</span>
+                        <span class="text-light" id="subtotal">$449.50</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                        <span class="text-muted">Envío</span>
+                        <span style="color: var(--neon-green);">GRATIS</span>
+                    </div>
+                    
+                    <hr style="border-color: var(--neon-blue);">
+                    
+                    <div class="d-flex justify-content-between mb-4 align-items-center">
+                        <span class="h5 mb-0">TOTAL</span>
+                        <span class="h3 mb-0 text-neon-price" id="total-final">$449.50</span>
+                    </div>
+
+                    <button class="btn btn-neon-primary w-100 py-3" onclick="alert('¡Procesando pago...!')">
+                        PAGAR AHORA <i class="bi bi-credit-card-2-front ms-2"></i>
+                    </button>
+                    
+                    <div class="text-center mt-3 small text-muted">
+                        <i class="bi bi-shield-lock"></i> Pago 100% Seguro
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </main>
+
+    <footer class="Lu-footer-container text-center">
+        <div class="container">
+            <p class="mb-1">&copy; 2024 Gamer Zone.</p>
+            <small class="text-muted">Diseñado con estilo Cyberpunk</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="detalleProducto.js"></script>
 </body>
 </html>
